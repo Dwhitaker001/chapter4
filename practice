@@ -1,9 +1,9 @@
 """
-	Complete all of the TODO directions
-	The number next to the TODO represents the chapter
-    and section that explain the required code
-	Your file should compile error free
-	Submit your completed file
+# Complete all of the TODO directions
+# The number next to the TODO represents the chapter
+# and section that explain the required code
+# Your file should compile error free
+# Submit your completed file
 """
 # TODO 4.2 A condition controlled loop
 # write a loop that will change the variable in num by subtracting 1
@@ -14,7 +14,7 @@ num = 10
 # write your code here, the variable needs to exist before
 # you test it
 while num > 0:
-    print(num)
+    print("t-", num)
     num -= 1
 
 # TODO 4.3 the For Loop
@@ -27,20 +27,20 @@ for day in ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
 # TODO 4.3 the for loop - range function
 # use the range function to print the numbers from 1 to 10
 print('\nI will display the numbers 1 to 10')
-for number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]:
-    print(number)
+for x in range(1, 11, 1):
+    print(x)
 
 # TODO 4.4 a running total
 # Have the user enter 5 numbers, provide a total at the end
 # You can assume integers
-MAX = 5 # The maximum number
+print("This program will average 5 numbers")
 total = 0.0
-print('\nThis program calculates the sum of')
-print(MAX, 'number you will enter')
-for counter in range(MAX):
+for counter in range(1, 6):
     number = int(input('Enter a number:'))
     total = total + number
-print('The total is', total)
+    print('The total is', total)
+    average = total / counter
+    print("This is your average so far: " + format(average, ".2f"))
 
 
 # TODO 4.5 Sentinel Value
@@ -49,6 +49,17 @@ print('The total is', total)
 # Have the user enter test scores until a sentinel value of -1 is
 # entered.
 # Display the total, the count and the average (total / count)
+test_scores = 0
+total_amount = 0
+count = 0
+print("Enter test scores you would like to average. Type -1 when done.")
+while test_scores >= 0:
+    test_scores = float(input("Please enter a test score: "))
+    if test_scores >= 0:
+        total_amount += test_scores
+        count += 1
+average = total_amount / count
+print(format(average, ".2f") + "is the average of the " + str(count) + " test scores entered.\n")
 
 
 # TODO 4.6 validating data
@@ -56,4 +67,12 @@ print('The total is', total)
 # Use a while loop to force the user to repeat the
 # prompt until the user enters a valid number. Test with
 # both valid and invalid data
+valid_number = False
+while not valid_number:
+    number2 = input("Please enter a number between 1 and 10: ")
+    # if number2 >= 1 and number2 <= 10:
+    if 1 <= number2 <= 10:
+        valid_number = True
+    else:
+        print("Error. Number not valid.\n")
 
