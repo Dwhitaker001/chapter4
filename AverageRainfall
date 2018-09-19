@@ -7,7 +7,8 @@
 
 for number in range(1, 11):
     square = number**2
-years = input('How many years would you like to collect data for?')
+years = int(input('How many years would you like to collect data for?'))
+for year in (range(1, years +1)):
 
-for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']:
-    print('How much rainfall fell during the month of', month,'?')
+    for month in ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']:
+        print('How much rainfall fell during the month of', month,'?')
